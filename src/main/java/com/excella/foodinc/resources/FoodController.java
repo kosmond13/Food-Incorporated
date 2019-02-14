@@ -10,7 +10,7 @@ import com.excella.foodinc.DTOs.FoodTO;
 @RestController
 @RequestMapping(value = "/foodinc", produces = MediaType.APPLICATION_JSON_VALUE)
 
-class FoodController {
+public class FoodController {
 
     FoodService foodService = new FoodService();
 
