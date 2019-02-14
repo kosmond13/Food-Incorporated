@@ -15,12 +15,11 @@ RUN add-apt-repository --yes ppa:linuxuprising/java \
     && apt-get update \
     && echo openjdk-11-jdk shared/accepted-oracle-license-v1-2 select true | debconf-set-selections
 
-#<TODO: INTSTALL OPENJDK-11-JDK HERE>
 RUN apt-get update && \
     apt-get install -y  openjdk-11-jdk && \
     apt-get install -y ant && \
     apt-get clean
-#<TODO: INSTALL ORACLE-JAVA11-SET-DEFAULT HERE>
+
 RUN apt-get install oracle-java11-set-default
 
 

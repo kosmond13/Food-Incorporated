@@ -3,7 +3,6 @@ services:
   local:
     container_name: local
     build: .
-    #    build: TODO: WHAT GOES HERE?
     stdin_open: true
     volumes:
       - .:/app
