@@ -23,7 +23,18 @@ repositories {
 }
 
 dependencies {
+	//implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation "org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}"
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compile("org.springframework.data:spring-data-jdbc")
+	compileOnly 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
+
 }
+//implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+//implementation 'org.springframework.boot:spring-boot-starter-webflux'
+//compileOnly 'org.projectlombok:lombok'
+//testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//testImplementation 'io.projectreactor:reactor-test'
