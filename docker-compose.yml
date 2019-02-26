@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     working_dir: /app
-    command: bash -c 'gradle bootRun'
+    command: bash -c 'bash'
   db:
     image: postgres:9.4
     container_name: postgres
