@@ -1,18 +1,25 @@
 package com.excella.foodinc.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import reactor.core.publisher.Mono;
+import org.springframework.stereotype.Service;
+import java.util.List;
 
-import com.excella.foodinc.DTOs.FoodBO;
-import com.excella.foodinc.DTOs.FoodTO;
+import com.excella.foodinc.domains.Food;
+import com.excella.foodinc.repository.FoodRepository;
 
+
+@Service
 public class FoodService {
 
-    FoodBO foodBusinessObject = new FoodBO();
+    @Autowired
+    private FoodRepository foodRepository;
 
-    public Mono<FoodTO> getNutrition (String foodType) {
+    public Mono<List<Food>> getNutrition (String foodType) {
 
-        FoodTO foodItem = foodBusinessObject.getFood(foodType);
+        List<Food> foodItem = foodRepository.findByName(foodType);
         return Mono.just(foodItem);
 
     }
+
 }
