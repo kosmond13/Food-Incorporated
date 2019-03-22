@@ -1,12 +1,16 @@
 # Food-Incorporated
-This project will help you learn about making REST requests to receive a Food object. You will dockerize the app, create and configure a database, and create the ability to write new data to the app throughout the phases.
+Before rolling on to a project at the Extension Center, there are some key concepts for your project you should be familiar with (not an expert at) Food Inc. is aimed at providing you with some familiarity with these concepts. When you roll on to the project in the near future, you'll be able to look back at how you used the frameworks/tools from Food Inc. as pillars of working knowledge.
+
+## High-Level Goal
+This application mirrors one such project at the XC. You will be creating two microservices that communicate with a common database. The database will hold information about food (e.g. calories, fat, protein, carbs) along with an identifier for that food ("Pizza"). Over the course of several phases, you will step-by-step create this architecture such that one microservice will be responsible for retrieving data from the database, and the other microservice will send data TO the database to be stored.
 
 ## Getting Started
 These instructions will help you get a copy of the project up and running on your local machine and install the necessary software.
-* Install the jdk for Java 11
-* Clone this repository 
-* To build the app, use `gradle build` If that doesn't work, try `./gradlew build`
-* To run the app, use `gradle bootRun` or `./gradlew bootRun`
+* Install the jdk for Java 11 on your local machine (or whatever machine you'll be running the application from (maybe an azure VM?)
+* Clone this repository in that machine
+* To build the app, we use java's most popular and fasted build tool: Gradle. Use `./gradlew build`
+** To learn about the differences between `./gradlew` and `gradle` see [this stackoverflow explanation](https://stackoverflow.com/a/39627421)
+* To run the app, use `./gradlew bootRun`
 
 
 ## Phase 1
