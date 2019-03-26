@@ -34,3 +34,7 @@ services:
 volumes:
   postgres_db:
   gradle_cache:
+networks:
+  default:
+    external:
+        name: food_inc_network

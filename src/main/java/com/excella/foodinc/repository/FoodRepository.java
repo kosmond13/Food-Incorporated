@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface FoodRepository extends CrudRepository<Food, Long> {
 
-    @Query("SELECT id, name, calories, fat, protein, carbs FROM foods where upper(name) like '%' || upper(:name) || '%' ")
+    @Query("SELECT id, name, calories, fat, protein, carbs FROM food where upper(name) like '%' || upper(:name) || '%' ")
     List<Food> findByName(@Param("name") String name);
 
 }
