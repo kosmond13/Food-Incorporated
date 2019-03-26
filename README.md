@@ -23,7 +23,17 @@ The goal of this phase is to make a REST request for a food object and have it r
   
 
 ## Phase 2
+The goal of this phase is to dockerize your app. Dockerizing your app allows versioning to be easily controlled and allow the app to successfully run on various environments. 
+1. Open up `Dockerfile` in your project and use the commented hints to complete the file
+2. Open up `docker-compose.yml` file and use the commented hints to complete the file
+
+Use the following commands for your containers:
+* `docker-compose build` to build the container
+* `docker-compose up` to spin up the containers
+* `docker-compose stop` to stop the containers
+* `docker stop $(docker ps -a -q)` to stop all running containers
 
 ## Phase 3
+The goal of this phase is to create and connect a database to your service to store your food nutrition data.
 
 ## Phase 4
